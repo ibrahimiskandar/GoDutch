@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Go Dutch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+<h1>Go Dutch</h1>
+<p class="sub">Add everyone, enter what each person spent, and see exactly who pays whom so the total splits evenly. Untick anyone who wasn’t part of an expense and they won’t pay for it.</p>
+<div class="bar">
+  <span class="seg" role="group" aria-label="Show results in"><button id="vAZN" aria-pressed="true">AZN ₼</button><button id="vUSD" aria-pressed="false">USD $</button></span>
+  <label>1 USD = <input id="rate" type="number" step="0.01" min="0.01" value="1.70" style="width:90px"> AZN</label>
+  <button id="reset">Clear all</button>
+</div>
+<div class="add"><input id="pname" type="text" placeholder="Person’s name" maxlength="40" aria-label="Person’s name"><button class="pri" id="addp">Add person</button></div>
+<div id="people" class="grid"></div>
+<section class="result" aria-live="polite"><h2>Who pays whom</h2><div id="out"></div></section>
+</main>
+<script src="script.js" defer></script>
+</body>
+</html>
